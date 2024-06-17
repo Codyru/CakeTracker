@@ -40,3 +40,49 @@ Cake Tracker is a management tool to track birthdays of company members in a rem
 ## Design Documentation
 
 - The project follows a layered architecture with a clear separation of concerns.
+- The MVC architecture was used for the design of the application.
+
+### Model (Entity)
+
+The `Member` entity represents a company member with the following attributes:
+
+- `firstName`: String
+- `lastName`: String
+- `birthDate`: LocalDate
+- `country`: String
+- `city`: String
+
+### Repository
+
+The `MemberRepository` interface provides methods to perform CRUD operations on `Member` entities.
+
+### Service
+
+The `MemberService` class contains the business logic. It validates the age of the member and checks for duplicate members before saving them to the database. The service ensures:
+- Members are at least 18 years old.
+- Duplicate members (based on first name, last name, country, and city) are not allowed.
+
+### Controller
+
+The `MemberController` class handles HTTP requests and responses. It includes methods to:
+- Display a home page with the options
+- Display the list of members.
+- Display the form to add a new member.
+- Handle form submissions to add a new member.
+- Handle validation errors and display user-friendly error messages.
+
+### View (Thymeleaf Templates)
+
+#### Base Template
+
+The `base.html` template is used as a home page layout.
+
+#### Add Member Template
+
+The `add-member.html` template includes a form for adding new members and displays error messages for validation failures, such as:
+- Member must be at least 18 years old.
+- Duplicate member entries based on first name, last name, country, and city.
+
+#### Members List Template
+
+The `members_list.html` template displays the list of members.
