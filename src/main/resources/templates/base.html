@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cake Tracker</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2" align="center">
+    <h1>Cake Tracker</h1>
+    <nav>
+        <ul style="list-style-type: none;">
+            <li><a class="btn btn-info btn-sm mb-3" th:href="@{/members}">Birthdays</a></li>
+            <li><a class="btn btn-info btn-sm mb-3" th:href="@{/members/add}">Add Member</a></li>
+            <li><a class="btn btn-info btn-sm mb-3" th:href="@{/members/sorted}">Upcoming Birthdays</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

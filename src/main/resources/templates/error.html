@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container my-2" align="center">
+<header>
+    <h1>Error</h1>
+</header>
+<div>
+    <h2>An error occurred</h2>
+    <p th:text="${errorMessage}">An unexpected error occurred. Please try again later.</p>
+</div>
+<footer>
+    <p>&copy; 2024 Datavid</p>
+</footer>
+</div>
+</body>
+</html>
